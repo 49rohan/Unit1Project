@@ -1,6 +1,17 @@
-﻿
+﻿@model UserModel
+
 @{
     ViewData["Title"] = "Home Page";
 }
 
-
+<h1>Enter Your Name</h1>
+<form asp-controller="Anime" asp-action="Index" method="post">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <br />
+    <button type="submit">Submit</button>
+</form>

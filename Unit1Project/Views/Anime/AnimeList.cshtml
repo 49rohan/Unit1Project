@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Anime List";
+    var topAnimes = Model as List<string>;
+}
+
+<h1>Hello, @ViewBag.FullName!</h1>
+<hr />
+<h2>Highes Rated Animes</h2>
+<p>According to "myanimelist", these are the highest rated anime of all time.</p>
+<ul>
+    @foreach (var anime in topAnimes)
+    {
+        <li>@anime</li>
+    }
+</ul>
