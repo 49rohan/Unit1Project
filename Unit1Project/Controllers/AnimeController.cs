@@ -29,7 +29,7 @@ namespace Unit1Project.Controllers
                 return RedirectToAction("AnimeList", new { fullName = fullName }); //Redirects to the AnimeList.cshtml file with the new full name
             }
 
-            return View(model); //return model if model state is not valid
+            return View("~/Views/Home/Index.cshtml", model); //If model state is invalid, then return to the index page with the error message
         }
 
         public IActionResult AnimeList(string fullName)
