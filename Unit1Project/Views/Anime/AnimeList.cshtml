@@ -1,15 +1,15 @@
 ﻿
 @{
     ViewData["Title"] = "Anime List";
-    var topAnimes = Model as List<string>;
+    var topAnimes = Model as List<string>; // Variable that stores the list of top rated animes
 }
 
-<h1>Hello, @ViewBag.FullName!</h1>
+<h1>Hello, @ViewBag.FullName!</h1> <!-- Display the full randomized name-->
 <hr />
 <h2>Highes Rated Animes</h2>
 <p>According to "myanimelist", these are the highest rated anime of all time.</p>
 <ul>
-    @foreach (var anime in topAnimes)
+    @foreach (var anime in topAnimes) //Loops and displays each anime from the list of animes
     {
         <li>@anime</li>
     }
